@@ -44,4 +44,13 @@ unsigned long long ShiftRight(unsigned long long value, int positions) {
 void PrintBinary(unsigned long long value) {
     for (int i = 63; i >= 0; i--) {
         printf("%d", (value >> i) & 1ULL);
-        if (i % 8 == 0 &&
+        if (i % 8 == 0 && i > 0) {
+            printf(" ");
+        }
+    }
+    printf("\n");
+}
+
+void PrintHex(unsigned long long value) {
+    printf("0x%llX\n", value);
+}
